@@ -16,7 +16,10 @@ const App = () => {
       <BrowserRouter>
         <header className="w-full flex  justify-between items-center bg-white sm:px-8 px-4 py-4 border-b border-b-[#e6ebbf4]">
           <Link to="/">
-            <img src={logo} alt="" className="w-28 object-contain" />
+            <h1 className="font-bold text-[#222328] text-[26px]">
+              Black-Forest-Labs
+            </h1>
+            {/* <img src={logo} alt="" className="w-28 object-contain" /> */}
           </Link>
           <Link
             to="/create-post"
@@ -25,7 +28,7 @@ const App = () => {
             Create
           </Link>
         </header>
-        <main className="sm:p-8 px-4 py-8 w-full bg-[#f9fafe] min-h-[calc(100vh-73px)]">
+        <main className="sm:p-8 px-4 py-8 w-full  min-h-[calc(100vh-73px)] bg-slate-100">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/create-post" element={<CreatePost />} />

@@ -22,7 +22,7 @@ const FormField = ({
         {isSurpriseMe && (
           <button
             type="button"
-            className="font-semibold text-xs bg-[#ECECF1] 
+            className="font-semibold text-xs bg-[#ECECF1]
         py-1 px-2 rounded-[5px] text-black cursor-pointer"
             onClick={handleSurpriseMe}
           >
