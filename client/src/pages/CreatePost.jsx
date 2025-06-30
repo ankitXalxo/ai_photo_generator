@@ -19,9 +19,16 @@ const CreatePost = () => {
 
     try {
       setGeneratingImg(true);
-      const response = await axios.post("http://localhost:8080/api/v1/dalle", {
-        prompt: form.prompt,
-      });
+      // const response = await axios.post("http://localhost:8080/api/v1/dalle", {
+      //   prompt: form.prompt,
+      // });
+      // setForm({ ...form, photo: response.data.photo });
+      const response = await axios.post(
+        " https://ai-photo-generator-4xu2.onrender.com/api/v1/dalle",
+        {
+          prompt: form.prompt,
+        }
+      );
       setForm({ ...form, photo: response.data.photo });
     } catch (error) {
       alert("Error generating image: " + error.message);
