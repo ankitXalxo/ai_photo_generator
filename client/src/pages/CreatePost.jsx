@@ -46,7 +46,10 @@ const CreatePost = () => {
 
     try {
       setLoading(true);
-      await axios.post("http://localhost:8080/api/v1/post", form);
+      await axios.post(
+        "https://ai-photo-generator-4xu2.onrender.com/api/v1/post",
+        form
+      );
       navigate("/");
     } catch (error) {
       alert("Error sharing post: " + error.message);
